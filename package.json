@@ -1,0 +1,11 @@
+{
+  "name": "hasti-portfolio",
+  "version": "1.0.0",
+  "description": "Personal portfolio website of Hasti Gor",
+  "main": "server.js",
+  "scripts": {
+    "start": "node server.js"
+  },
+  "author": "Hasti Gor",
+  "license": "ISC"
+}
