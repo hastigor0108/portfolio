@@ -193,6 +193,8 @@ body.light .hero {
   justify-content: center;
   gap: 20px;
   flex-wrap: wrap;
+  margin-top: 30px;
+  width: 100%;
 }
 
 .social-links a {
