@@ -7,8 +7,5 @@
     "start": "node server.js"
   },
   "author": "Hasti Gor",
-  "license": "ISC",
-  "dependencies": {
-    "nodemailer": "^8.0.7"
-  }
+  "license": "ISC"
 }
