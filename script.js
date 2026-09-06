@@ -95,20 +95,38 @@ document
 
 
 // Simple Contact Form
-const contactForm =
-  document.getElementById("contact-form");
+// EmailJS Initialization
+emailjs.init({
+  publicKey: "4ag8Zise59P4C1mLU"
+});
 
-const formMessage =
-  document.getElementById("form-message");
+// Contact Form
+const contactForm = document.getElementById("contact-form");
+const formMessage = document.getElementById("form-message");
 
 contactForm.addEventListener("submit", function (e) {
-
   e.preventDefault();
 
-  formMessage.textContent =
-    "Message sent successfully!";
+  formMessage.textContent = "Sending message...";
+  formMessage.style.color = "white";
 
-  formMessage.style.color = "lightgreen";
+  emailjs.sendForm(
+    "service_95i50wh",
+    "template_2iug0lh",
+    contactForm
+  )
+  .then(function () {
+    formMessage.textContent = "Message sent successfully! ✓";
+    formMessage.style.color = "lightgreen";
 
-  contactForm.reset();
+    contactForm.reset();
+  })
+  .catch(function (error) {
+    console.error("EmailJS Error:", error);
+
+    formMessage.textContent =
+      "Failed to send message. Please try again.";
+    formMessage.style.color = "red";
+  });
 });
+
