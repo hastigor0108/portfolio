@@ -2,9 +2,11 @@
 <html lang="en">
 <head>
   <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Hasti Gor | Portfolio</title>
-  <link rel="stylesheet" href="style.css" />
+  <link rel="stylesheet" href="style.css">
+  <script src="https://cdn.jsdelivr.net/npm/@emailjs/browser@4/dist/email.min.js"></script>
+
 </head>
 <body>
 
@@ -259,7 +261,7 @@
         </p>
         <a href="https://github.com/hastigor0108/Mom-Birthday-Card" class="project-btn">View Project</a>
       </div>
-
+      
       <div class="project-card">
         <h3>Nestora</h3>
         <p>
@@ -267,7 +269,6 @@
         </p>
         <a href="https://hastigor0108.github.io/nestora/" class="project-btn">View Project</a>
       </div>
-      
     </div>
   </section>
 
@@ -323,23 +324,44 @@
     </div>
   </section>
 
-  <!-- CONTACT -->
-  <section id="contact" class="section">
-    <h2 class="section-title">Contact Me</h2>
-    <div class="contact-box">
-      <p><strong>Email:</strong> hastigor123@gmail.com</p>
-      <p><strong>Location:</strong> Bhuj, Kutch, Gujarat, India</p>
+<!-- CONTACT -->
+<section id="contact" class="section">
+  <h2 class="section-title">Contact Me</h2>
 
-      <form id="contact-form">
-        <input type="text" placeholder="Your Name" required />
-        <input type="email" placeholder="Your Email" required />
-        <textarea rows="5" placeholder="Your Message" required></textarea>
-        <button type="submit" class="btn primary-btn">Send Message</button>
-      </form>
+  <div class="contact-box">
+    <p><strong>Email:</strong> hastigor123@gmail.com</p>
+    <p><strong>Location:</strong> Bhuj, Kutch, Gujarat, India</p>
 
-      <p id="form-message"></p>
-    </div>
-  </section>
+    <form id="contact-form">
+      <input
+        type="text"
+        name="name"
+        placeholder="Your Name"
+        required
+      />
+
+      <input
+        type="email"
+        name="email"
+        placeholder="Your Email"
+        required
+      />
+
+      <textarea
+        name="message"
+        rows="5"
+        placeholder="Your Message"
+        required
+      ></textarea>
+
+      <button type="submit" class="btn primary-btn">
+        Send Message
+      </button>
+    </form>
+
+    <p id="form-message"></p>
+  </div>
+</section>
 
   <!-- FOOTER -->
   <footer>
